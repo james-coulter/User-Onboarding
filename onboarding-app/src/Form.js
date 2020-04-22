@@ -106,27 +106,29 @@ const Form = (props) => {
       };
       console.log(errors)
 
-      const char = '@'
 
     return (
+        <div className="parallax">
         <div className='whole-container'>
         <form className='team-form' onSubmit={handleSubmit}>
             <div className="inputs-container">
-            <h2>Create an Account</h2>
-            <h3>Unleash your inner coder!</h3>
-            <label>Name:&nbsp;
-            <input type="text" value={formState.name} onChange={onInputChange} name='name'/>
+            <div className="head">
+            <h2>User-Onboarding</h2>
+            <h3>Welcome to the team!</h3>
+            </div>
+            <label>
+            <input placeholder="Name" className="user-input" type="text" value={formState.name} onChange={onInputChange} name='name'/>
             </label>
-            <label>Email:&nbsp;
-            <input type="text" value={formState.email} onChange={onInputChange} name='email'/>
+            <label>
+            <input placeholder="Email" className="email-input" type="text" value={formState.email} onChange={onInputChange} name='email'/>
             {/* {errors.email.includes(char) ? (
                 <p className="error-set">{errors.email}</p>) : null } */}
             </label>
-            <label>Password:&nbsp;
-            <input type="password" value={formState.password} onChange={onInputChange} name='password'/></label>
-            <label>Terms of Service:&nbsp;
-            <input type="checkbox" value={formState.terms} onChange={onInputChange} name='terms'/></label>
-            <button className='submit' disabled={buttonDisabled}>SUBMIT</button>
+            <label>
+            <input placeholder="Password" className="pass-input" type="password" value={formState.password} onChange={onInputChange} name='password'/></label>
+            <label><div className="terms">Terms of Service:
+            <input type="checkbox" value={formState.terms} onChange={onInputChange} name='terms'/></div></label>
+            <button className='submit' disabled={buttonDisabled}>SIGN UP</button>
             </div>
             <div className='errors'>
                 {errors.name}
@@ -134,7 +136,14 @@ const Form = (props) => {
                 {errors.password}
             </div>
         </form>
-         <pre>{JSON.stringify(user, null, 2)}</pre>
+        </div>
+        <div className="newData">
+        <h2>Sshh....</h2>
+        <h3>Returned BackEnd Data Below</h3>
+        <div className='returnedArray'>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
+        </div>
+        </div>
         </div>
     )
 }
