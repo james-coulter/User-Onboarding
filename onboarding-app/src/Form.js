@@ -128,9 +128,9 @@ const Form = (props) => {
             <input placeholder="Password" className="pass-input" type="password" value={formState.password} onChange={onInputChange} name='password'/></label>
             <label><div className="terms">Terms of Service:
             <input type="checkbox" value={formState.terms} onChange={onInputChange} name='terms'/></div></label>
-            <button className='submit' disabled={buttonDisabled}>SIGN UP</button>
+            <button data-cy='submit' className='submit' disabled={buttonDisabled}>SIGN UP</button>
             </div>
-            <div className='errors'>
+            <div className='errors' id="errors">
                 {errors.name}
                 {errors.email}
                 {errors.password}
@@ -141,7 +141,7 @@ const Form = (props) => {
         <h2>Sshh....</h2>
         <h3>Returned BackEnd Data Below</h3>
         <div className='returnedArray'>
-        <pre>{JSON.stringify(user, null, 2)}</pre>
+        <pre id='text'>{JSON.stringify(user, null, 2)}</pre>
         </div>
         </div>
         </div>
