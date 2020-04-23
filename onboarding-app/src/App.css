@@ -1,0 +1,157 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.parallax {
+  background-image: url('dark.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.whole-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 20%;
+}
+
+
+.team-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 40%;
+  background: #2E3047;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 10px 5px 20px rgb(46, 45, 46);
+  padding: 5%;
+  color: #3BBA9C;
+  text-align: center;
+}
+
+.team-form h3 {
+  color: #707793;
+}
+
+.head {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 10%;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+.head h3 {
+  font-size: 1.5rem;
+}
+
+.team-form input {
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+
+  margin: 3%;
+}
+
+button {
+  background-color: #3BBA9C;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5%;
+  margin-top: 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #707793;
+}
+
+.errors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputs-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.terms {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: left;
+}
+
+.newData {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+  color: #707793;
+  background: #43455C;
+  margin-top: 5%;
+  box-shadow: inset 10px 5px 20px #2E3047;
+}
+
+.newData h2 {
+  font-size: 5rem;
+  margin-left: 2%;
+}
+
+.newData h3 {
+  font-size: 3rem;
+  margin-left: 2%;
+}
+
+.returnedArray {
+  display: flex;
+  align-content: center;
+  font-size: 2rem;
+  margin-left: 20%;
+}
